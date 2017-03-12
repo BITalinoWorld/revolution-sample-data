@@ -1,0 +1,6 @@
+x=loadtxt('SampleEEG.txt')
+plot((x[48000:56000,-1]/1024-.5)*3.3/40000*1000000,'k')
+ylim([-40,40])
+ylabel('uV')
+xlabel('t (ms)')
+savefig('SampleEEG.png',dpi=300)
